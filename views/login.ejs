@@ -1,0 +1,79 @@
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/users/login" method="post">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value="Enter your username"
+          />
+          <label for="password">Password: </label>
+          <input id="password" name="password" type="password" />
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-target="#registerModal" data-bs-toggle="modal" data-bs-dismiss="modal">Register</button>
+        <submit type="button" class="btn btn-primary">Login</submit>
+      </div>
+    </div>
+     </form>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="registerModal"
+  aria-hidden="true"
+  aria-labelledby="registerModalLabel"
+  tabIndex="-1"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registerModalLabel">Register</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/users/register" method="post">
+          <label for="name">Name:</label>
+          <input type="text" name="name" value="Enter your name" />
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value="Enter your username"
+          />
+          <label for="password">Password: </label>
+          <input id="password" name="password" type="password" />
+        
+      </div>
+      <div class="modal-footer">
+         <submit type="button" class="btn btn-primary">Sign up</submit>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
