@@ -9,5 +9,13 @@ router.get("/register", (req, res) => {
   res.send("Register");
 });
 
+router.post("/register", (req, res) => {
+  console.log(req.body);
+  res.send("hello");
+});
+
+router.post("/login", (req, res) => {
+  res.send("hi");
+});
 // router.get("/")
 module.exports = router;

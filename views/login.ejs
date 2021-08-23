@@ -23,16 +23,18 @@
             type="text"
             id="username"
             name="username"
-            value="Enter your username"
+            placeholder="Entery username"
+            value="<%= typeof email != 'undefined' ? email: '' %>"
           />
           <label for="password">Password: </label>
           <input id="password" name="password" type="password" />
        
-      </div>
+     </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-target="#registerModal" data-bs-toggle="modal" data-bs-dismiss="modal">Register</button>
-        <submit type="button" class="btn btn-primary">Login</submit>
+        <button type="submit" class="btn btn-primary">Login</>
       </div>
+       
     </div>
      </form>
   </div>
@@ -58,7 +60,7 @@
       <div class="modal-body">
         <form action="/users/register" method="post">
           <label for="name">Name:</label>
-          <input type="text" name="name" value="Enter your name" />
+          <input type="text" name="name" placeholder ="Enter your name" value="<%= typeof name != 'undefined' ? email: '' %>" />
           <label for="username">Username:</label>
           <input
             type="text"
@@ -71,8 +73,9 @@
         
       </div>
       <div class="modal-footer">
-         <submit type="button" class="btn btn-primary">Sign up</submit>
+         <button type="submit" class="btn btn-primary">Sign up</>
       </div>
+      
       </form>
     </div>
   </div>
