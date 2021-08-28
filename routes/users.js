@@ -67,9 +67,13 @@ router.post("/register", (req, res) => {
 });
 
 router.post("/login", (req, res, next) => {
-  passport.authenticate("local", {
-    successRedirect: "/damnn",
-    failureRedirect: "/",
+  passport.authenticate("local", (err, user, info) => {
+    if (err) return next(err);
+    if (!user) return res.redirect("/");
+    req.logIn(user, (err) => {
+      if (err) return next(err);
+      return res.redirect("/dammnnn");
+    });
   })(req, res, next);
 });
 // router.get("/")
